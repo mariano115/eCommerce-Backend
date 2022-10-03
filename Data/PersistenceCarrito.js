@@ -26,7 +26,7 @@ const crearCarrito = async () => {
     carritos.push(carrito);
 
     await fs.promises.writeFile(
-      `carrito.json`,
+      `./carrito.json`,
       JSON.stringify(carritos, null, 2)
     );
 

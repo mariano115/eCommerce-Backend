@@ -1,15 +1,6 @@
 const router = require("express").Router();
 const PersistenceCarrito = require("../Data/PersistenceCarrito");
 
-const adminValidator = (req) => {
-  try {
-    console.log(req);
-  } catch {
-    throw new Error("Invalid cookies");
-  }
-  next();
-};
-
 router.get("/", async (req, res) => {
   res.status(200).send(await PersistenceCarrito.getCarritos());
 });
